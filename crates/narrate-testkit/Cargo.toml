@@ -1,0 +1,15 @@
+[package]
+name = "narrate-testkit"
+description = "Test-only binaries for the narrate black-box tests: fake worker, fake uv, allow-list proxy, console-signal helper"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish = false
+
+# The four binaries are discovered from src/bin/: narrate-test-worker, narrate-test-uv,
+# narrate-test-proxy, narrate-test-signal. tests/smoke.rs makes `cargo test --workspace` build them.
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+windows-sys = { workspace = true }

@@ -1,0 +1,5 @@
+# Pinned inputs hash into the pin set id; keep their bytes identical on every checkout.
+crates/narrate/pins.json text eol=lf
+python/pyproject.toml text eol=lf
+python/uv.lock text eol=lf
+python/narrate_worker.py text eol=lf

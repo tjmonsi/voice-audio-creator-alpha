@@ -1,0 +1,18 @@
+[package]
+name = "narrate-core"
+description = "Text pipeline, WAV encoding, and reference-clip helpers for narrate"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lib]
+name = "narrate_core"
+
+[dependencies]
+hound.workspace = true
+pulldown-cmark.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

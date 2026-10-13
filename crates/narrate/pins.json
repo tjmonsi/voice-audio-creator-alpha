@@ -1,0 +1,46 @@
+{
+  "format": 1,
+  "uv": { "version": "0.10.2" },
+  "python": {
+    "version": "3.11.14",
+    "build": "cpython-3.11.14-windows-x86_64-none",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260203/cpython-3.11.14%2B20260203-x86_64-pc-windows-msvc-install_only_stripped.tar.gz",
+    "sha256": "851ba0c5a7c281912ca9bf68c340c69156e9e292de26f9068137f5650b537ff5"
+  },
+  "huggingface": [
+    {
+      "repo": "ResembleAI/chatterbox-turbo",
+      "revision": "749d1c1a46eb10492095d68fbcf55691ccf137cd",
+      "dir": "chatterbox-turbo",
+      "files": [
+        { "path": "t3_turbo_v1.safetensors", "size": 1915480052, "sha256": "fcf1f8c1d651bb7e3acd69ee5be269b4ac10c02980b7708213d598bc9f7cdf87" },
+        { "path": "s3gen_meanflow.safetensors", "size": 1064875036, "sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f" },
+        { "path": "ve.safetensors", "size": 5695784, "sha256": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c" },
+        { "path": "conds.pt", "size": 169454, "sha256": "b1852099306fd6a7814eb9d0bd10186caba7249596cc23868f78a0eefbfa5033" },
+        { "path": "vocab.json", "size": 999186, "sha256": "f6bd25a65e4e63ca31360e9fb11c7e4f9a391a78385d640acd814092dd6eee4f" },
+        { "path": "merges.txt", "size": 456318, "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5" },
+        { "path": "tokenizer_config.json", "size": 3878, "sha256": "bca16a2ac1ddbd78b8d6228f0031884cc74b6ea54b967d6f6d2ebae9ccde23e6" },
+        { "path": "special_tokens_map.json", "size": 470, "sha256": "92ba8063bf40aa163eadebbfe0de07c2aebe44cf0d4a9e8726580b0781fd2640" },
+        { "path": "added_tokens.json", "size": 418, "sha256": "72e4ab6acb0d9309ac3df4b526ae5fd80a2da5bc5ab7bb02d85096a374f69193" }
+      ]
+    },
+    {
+      "repo": "hexgrad/Kokoro-82M",
+      "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+      "dir": "kokoro-82m",
+      "files": [
+        { "path": "kokoro-v1_0.pth", "size": 327212226, "sha256": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4" },
+        { "path": "config.json", "size": 2351, "sha256": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f" },
+        { "path": "voices/af_heart.pt", "size": 523425, "sha256": "0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff" },
+        { "path": "voices/am_michael.pt", "size": 523435, "sha256": "9a443b79a4b22489a5b0ab7c651a0bcd1a30bef675c28333f06971abbd47bd37" }
+      ]
+    }
+  ],
+  "voices": {
+    "reference_text": "The morning light settled over the quiet harbor, and the fishing boats rocked gently against the pier. A gull called out twice, then glided low across the water. It will be a calm, clear day for a long walk along the coast.",
+    "min_samples": 240000,
+    "female": { "engine": "kokoro", "voice": "af_heart" },
+    "male": { "engine": "kokoro", "voice": "am_michael" },
+    "builtin": { "engine": "chatterbox-turbo", "seed": 1 }
+  }
+}
